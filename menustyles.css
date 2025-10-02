@@ -1,0 +1,699 @@
+body {
+    margin: 0;
+    background-color: #F9EBC7;
+    background-image: url(Images/bean_background.png);
+    background-position: center;
+}
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #783D19;
+    height: 80px;
+}
+
+nav .logo {
+    padding-left: 3vw;
+}
+
+nav .logo img{
+    width:175px;
+}
+
+nav .links {
+    display: flex;
+    gap: 5vw;
+    padding-right: 5vw;
+}
+
+nav a {
+    color: #F9EBC7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #1B1B1B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #A9B388;
+}        
+
+nav img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Navigation - Scalability */
+
+@media (max-width: 450px) {
+
+    nav {
+        height: auto;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 5px;
+    }
+    nav .links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+}
+
+/* Navigation - Active State*/
+nav a.active {
+    color: #A9B388; 
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px; 
+    width: 8px;
+    height: 8px;
+    background-color: #A9B388; 
+    border-radius: 50%; 
+}
+
+
+
+
+
+
+
+
+/* Dividers and Headers */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-divider, .mid-divider, .bottom-divider {
+    width: 100%;
+}
+
+.bottom-divider {
+    margin-bottom: 50px;
+}
+
+.header-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.signature-coffee,
+.non-coffee,
+.frappuccino,
+.pastries {
+    width: 80%;
+    max-width: 677px;
+    transition: transform 0.3s ease;
+}
+
+.signature-coffee:hover, .non-coffee:hover, .frappuccino:hover, .pastries:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Search Bar */
+
+.search-bar {
+    background-color: #783D19;
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 2px solid #5C3107;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    color: #FEFAE0;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Tables */
+
+.menu-container {
+    background-color: rgba(95, 111, 82, 0.1);
+    border: 2px solid #783D19;
+    width: 90%;
+    max-width: 1290px;
+    margin-bottom: 10vh;
+}
+
+.menu-container-frappuccino {
+    background-color: rgba(95, 111, 82, 0.1);
+    border: 2px solid #783D19;
+    width: 90%;
+    max-width: 1000px;
+    margin-bottom: 10vh;
+}
+
+.menu-container-pastries{
+    background-color: rgba(95, 111, 82, 0.1);
+    border: 2px solid #783D19;
+    width: 90%;
+    max-width: 780px;
+    margin-bottom: 10vh;
+}
+
+.menu-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "Inria Sans", sans-serif;
+    color: #783D19;
+}
+
+.menu-table th,
+.menu-table td {
+    border: 1px solid;
+    padding: 8px;
+}
+
+.table-header,
+.drink-size {
+    text-align: center;
+    height: 35px;
+    padding: 8px 8px 10px 2px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.drink-size{
+    width: 80px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.menu-table tbody td:nth-child(n+3) {
+    text-align: center;
+    width: 80px;
+    font-size: 1rem;
+}
+
+
+
+
+
+/* Drink Information */
+
+td.drink-info {
+    border-left: none;
+    padding-left: 0;
+    vertical-align: middle;
+}
+
+td.drink-cell{
+    border-right: none;
+    text-align: center;
+}
+
+.drink-name{
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.drink-desc{
+    font-family: "Cardo", serif;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+
+
+
+
+/* Drink Images */
+
+.item-img{
+    width: 140px;
+    vertical-align: middle;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+.item-img:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+       
+
+/* Little Extras */
+
+.little-extras{
+    font-family: "Cardo",serif;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+
+
+
+/* Table Hover*/
+
+.search-bar, .menu-container, .menu-container-frappuccino, .menu-container-pastries {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar:hover, .menu-container:hover, .menu-container-frappuccino:hover, .menu-container-pastries:hover {
+    transform: scale(1.005);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+/* Scalability */
+
+@media (max-width: 800px) {
+    .search-bar {
+        width: 75%;
+    }
+    
+    .item-img {
+        width: 90px;
+    }
+
+    .signature-coffee,
+    .non-coffee,
+    .frappuccino,
+    .pastries {
+        width: 100%;
+    }
+
+    .drink-name, .drink-desc {
+        font-size: 0.9rem;
+    }
+
+    .menu-container, 
+    .menu-container-frappuccino, 
+    .menu-container-pastries {
+        overflow-x: auto;  
+    }
+}
+
+@media (max-width: 400px) {
+  .item-img {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer .top{
+    background-color: #783D19;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1fr;
+    padding: 6vh 8vw;
+    color: #F9EBC7;
+    text-shadow: 1px 1px 1px #1B1B1B;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+footer .heading {
+    color: #FFF08F;
+    font-size: 1.2rem;
+}
+
+
+
+/* Footer - Navigate */
+
+.footer-navigate {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    width: 150px;
+   
+}
+
+.footer-navigate a {
+    color: #F9EBC7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #1B1B1B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-navigate a:hover {
+    color: #A9B388;
+}            
+
+/* Footer Navigation - Active State*/
+.footer-navigate a.active {
+    color: #A9B388; 
+    position: relative;
+}
+
+.footer-navigate a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px; 
+    width: 8px;
+    height: 8px;
+    background-color: #A9B388; 
+    border-radius: 50%; 
+}
+
+
+
+/* Footer - Time */
+
+.footer-hours {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 400px;
+}
+
+.footer-hours .heading {
+    grid-column: 1/3;
+}
+
+.footer-hours .day {
+    display: flex;
+    align-items: center;
+}
+
+.footer-hours .line {
+    flex: 1;
+    border-bottom: 1px solid #FEFAE0;
+    margin: 0 10px;
+}
+
+.footer-hours .time {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Footer - Newsletter */
+
+.footer-extra {
+    display: flex;
+    flex-direction: column;
+    row-gap: 75px;
+    width: 250px;
+}
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.form-email {
+    display: flex;
+    align-items: center;
+}
+
+.form-email input {
+  padding: 5px;
+  border: 2px solid #F9EBC7;  
+  background-color: transparent;
+  color: #F9EBC7;          
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+.form-email input::placeholder {
+  color: #F9EBC7;
+}
+
+.form-email input:focus {
+    outline: none;
+}
+
+.form-email button {
+  background-color: #F9EBC7;  
+  color: #5C3107;              
+  border: none;
+  padding: 5px 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.form-email button:hover {
+  background-color: #e0cd9b;
+}
+
+
+
+/* Footer - Socials */
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.social-logos {
+    display: flex;
+}
+
+.social-logos img{
+    width: 30px;
+    padding-right: 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.socials:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Footer - Copyright */
+
+footer .bottom {
+    background-color: #5C3107;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1fr;
+    padding-right: 8vw;
+    padding-left: 8vw;
+}
+
+div.copyright {
+    grid-column: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    color: #F9EBC7;
+}
+
+
+
+/* Footer Scalability */
+
+@media (max-width: 1200px) {
+    footer .top {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+
+    .footer-navigate,
+    .footer-hours,
+    .footer-extra,
+    .footer-logo {
+        width: 100%;
+    }
+
+
+    .footer-newsletter .heading {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    footer .top {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .footer-hours .heading {
+        padding-top: 10px;
+    }
+   
+    .footer-newsletter .heading {
+        padding-top: 10px;
+    }
+
+    .footer-extra {
+        row-gap: 30px;
+    }
+
+    .footer-logo {
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+/* To Top Button */
+
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5F6F52;
+    color: #F9EBC7;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+    animation: bounce 2s infinite;
+}
+
+.top-button:hover {
+    background-color: #A9B388;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+
+/* Page Transition */
+#page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #783D19;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 0.2s ease-in-out forwards;
+    animation-delay: 0.75s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+#page-transition p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #F9EBC7;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.coffee-transition img {
+    width: 125px;
+    animation: jump 0.8s ease;
+}
+
+@keyframes jump {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-40px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
